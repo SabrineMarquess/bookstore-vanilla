@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDA Livraria │ Bem vindo!</title>
+    <link rel="stylesheet" href="style_dashboard.css">
+    <link rel="stylesheet" href="../global/style_global/main.css">
+    <script src="https://kit.fontawesome.com/0bfe50ba03.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- sidebar v2 // principal referência: https://www.youtube.com/watch?v=RlaZjCgTw9M-->
+    <!-- "Aside" é uma tag HTML usada para representar uma seção lateral, independente do conteúdo principal do documento.  -->
+    <aside class="sidebar" id="sidebar">
+        <header class="sidebar-header">
+            <div class="toggle" id="btn-exp">
+                <span class="top_line common"></span>
+                <span class="mid_line common"></span>
+                <span class="bot_line common"></span>
+            </div>
+            <img class="logo2" src="../global/imagens_global/logo2.png">
+        </header>
+        <nav>
+            <a href="dashboard.html">
+                <button class="dash buttonmenu ativo">
+
+                    <span>
+                        <i class="fa-solid fa-house" style="color: #ffffff;"></i><span class="txt-link">Dashboard</span>
+                    </span>
+                </button>
+            </a>
+
+            <br>
+            <button class="adm buttonmenu">
+
+                <span>
+                    <i class="fa-solid fa-user-tie" style="color: #ffffff;"></i><span
+                        class="txt-link">Administração</span>
+                </span>
+
+            </button>
+            <ul class="list-tabelas" id="list-tabelas">
+                <span class="borda-preta"></span>
+                <li><a href="../usuarios/usuarios.html">Usuários</a></li>
+                <span class="borda-preta"></span>
+                <li><a href="../livros/livros.html">Livros</a></li>
+                <span class="borda-preta"></span>
+                <li><a href="../editoras/editoras.html">Editoras</a></li>
+                <span class="borda-preta"></span>
+                <li><a href="../alugueis/alugueis.html">Aluguéis</a></li>
+                <span class="borda-preta"></span>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Criando menu mobile -->
+    <nav class="menu-mobile" id="menu-mobile">
+        <button class="closebutton" onclick="toggleMenu()"> <span class="close"><i
+                    class="fa-solid fa-circle-xmark fa-lg"></i></span>
+        </button>
+        <div class="logoclose">
+            <img src="../global/imagens_global/logo2.png">
+        </div>
+        <button class="dash buttonmobile">
+            <a href="dashboard.html">
+                <span>
+                    <i class="fa-solid fa-house"></i><span class="mobile-text">Dashboard</span>
+                </span>
+            </a>
+        </button>
+        <button class="adm buttonmobile">
+            <a href="#">
+                <span>
+                    <i class="fa-solid fa-user-tie"></i><span class="mobile-text">Administração</span>
+                </span>
+            </a>
+        </button>
+        <ul class="list-tabelas-mobile" id="list-tabelas-mobile">
+            <li><a href="../usuarios/usuarios.html">Usuários</a></li>
+
+            <li><a href="../livros/livros.html">Livros</a></li>
+
+            <li><a href="../editoras/editoras.html">Editoras</a></li>
+
+            <li><a href="../alugueis/alugueis.html">Aluguéis</a></li>
+
+        </ul>
+    </nav>
+    <!-- devolver -->
+    <div class="modaldevolvercaixa">
+        <div class="modaldevolver">
+            <button class="close-modal-devolver" id="close-modal-devolver"><img
+                    src="../global/imagens_global/closeicon.png"></button>
+            <div class="modal-header-devolver">
+                <img src="../global/imagens_global/devolvermodal.png">
+                <h1>Devolver livro</h1>
+            </div>
+            <div class="modal-body-devolver">
+                <h2>Você deseja continuar com a devolução do livro?</h2>
+                <div class="modal-footer-devolver">
+                    <button class="cancelarbutton-devolver"><span>Cancelar</span></button>
+                    <button id="devolverbutton" class="secondbutton"><span>Sim, devolver</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Setor Principal -->
+    <main class="main">
+        <div class="menu">
+            <button class="button-mobile" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars fa-2xl" style="color: #1E6EAA;"></i>
+            </button>
+            <img class="logo1" src="../global/imagens_global/logo1.png">
+
+            <div class="profile" onclick="toggleDropdown()">
+                <i style="color: #ffffff;">SS</i>
+            </div>
+            <!-- Dropdown Profile - referência: https://www.youtube.com/watch?v=ybXulmeilFM -->
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <div class="profile-dropdown">
+                            <i style="color: #ffffff;">SS</i>
+                        </div>
+                        <h6>Sabrine Silva</h6>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">Sair</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="dashboard">
+            <div class="content-dashboard">
+                <div class="headerdashboard">
+                    <h1 class="h1principal">Dashboard</h1>
+                </div>
+
+                <div class="bloco1">
+                    <h2>Livros mais alugados</h2>
+                    <div class="maisalugados">
+                        <div class="livro1 maisalug">
+                            <h1>1</h1>
+                            <h3>Código limpo: Habilidades práticas do Agile Software</h3>
+                        </div>
+                        <div class="livro2 maisalug">
+                            <h1>2</h1>
+                            <h3>Java: Como Programar</h3>
+                        </div>
+                        <div class="livro3 maisalug">
+                            <h1>3</h1>
+                            <h3>Desenvolvimento Real de
+                                Software: Um guia de projetos para fundamentos em Java</h3>
+                        </div>
+                        <div class="livro4 maisalug">
+                            <h1>4</h1>
+                            <h3>Arquitetura limpa: O guia do artesão para estrutura e design de software</h3>
+                        </div>
+                    </div>
+
+
+                </div>
+                <hr class="divisoria1">
+                <div class="middledashboard">
+                    <div class="bloco2">
+                        <h2>Aluguéis em atraso</h2>
+                        <div class="tabela">
+                            <table>
+                                <thead>
+                                    <div class="headers">
+                                        <tr class="thead">
+                                            <!-- Table Headers - Dados que irão ser retornados -->
+                                            <th>Livro</th>
+                                            <th>Usuário</th>
+                                            <th>Previsão de devolução</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </div>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Livro">Java: Como Programar</td>
+                                        <td data-label="Usuário">Caio Cunha</td>
+                                        <td class="prevdevolucao" data-label="Previsão de devolução">18/08/2023</td>
+                                        <td data-label="Ações"><img class="icondevolver open-modal-devolver"
+                                                src="../global/imagens_global/devolver.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Livro">Java: Como Programar</td>
+                                        <td data-label="Usuário">Caio Cunha</td>
+                                        <td class="prevdevolucao" data-label="Previsão de devolução">18/08/2023</td>
+                                        <td data-label="Ações"><img class="icondevolver open-modal-devolver"
+                                                src="../global/imagens_global/devolver.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Livro">Java: Como Programar</td>
+                                        <td data-label="Usuário">Caio Cunha</td>
+                                        <td class="prevdevolucao" data-label="Previsão de devolução">18/08/2023</td>
+                                        <td data-label="Ações"><img class="icondevolver open-modal-devolver"
+                                                src="../global/imagens_global/devolver.png"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tabela2">
+                            <h2>LIVROS ADICIONADOS RECENTEMENTE</h2>
+                            <div class="tabela">
+                                <table>
+                                    <thead>
+                                        <div class="headers">
+                                            <tr class="thead table2">
+                                                <!-- Table Headers - Dados que irão ser retornados -->
+                                                <th>Nome</th>
+                                                <th>Autor</th>
+                                                <th>Editora</th>
+                                            </tr>
+                                        </div>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Nome">Harry Potter <br class="br-harry">e a Pedra Filosofal
+                                            </td>
+                                            <td data-label="Autor">J.K. Rowling</td>
+                                            <td data-label="Editora">Editora Rocco</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Nome">Harry Potter <br class="br-harry">e a Pedra Filosofal
+                                            </td>
+                                            <td data-label="Autor">J.K. Rowling</td>
+                                            <td data-label="Editora">Editora Rocco</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Nome">Harry Potter <br class="br-harry">e a Pedra Filosofal
+                                            </td>
+                                            <td data-label="Autor">J.K. Rowling</td>
+                                            <td data-label="Editora">Editora Rocco</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metaultimos">
+                        <div class="bloco3">
+                            <div class="bloco3header">
+                                <h2>Meta de Aluguéis</h2>
+                                <img src="../global/imagens_global/pencil.png" id="pencil-icon">
+                            </div>
+                            <div class="bloco3body">
+                                <div class="textprogress" id="textprogress">
+
+                                    <h1><span id="valorAtual"></span></h1>
+
+                                    <h3><span id="valorMaximo"></span></h3>
+                                </div>
+                                <form class="form-editar" id="form-editar">
+                                    <div class="input-group">
+
+                                        <label for="inputAtual">Valor Atingido:</label>
+                                        <input type="number" id="inputAtual" required>
+                                        <br>
+                                        <label for="inputMaximo">Meta:</label>
+                                        <input type="number" id="inputMaximo" required>
+                                        <br>
+                                    </div>
+
+                                    <button class="submit" type="submit">Salvar</button>
+                                </form>
+                                <progress id="barrinha" class="barrinha" max="160" value="80"></progress>
+                                <div id="blocoporcentagem">
+                                    <h4 id="porcentagem"></h4>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="bloco4">
+                            <h2>Últimos Aluguéis</h2>
+                            <div class="aluga1 ultimoalug">
+                                <div class="flex flex1"><img class="book" src="../global/imagens_global/book.png">
+                                    <h5>Código limpo: Habilidades práticas do Agile Software</h5>
+                                </div>
+                                <div class="flex"><img class="user" src="../global/imagens_global/user.png">
+                                    <h5>Caio Cunha</h5>
+                                </div>
+                            </div>
+
+                            <div class="aluga2 ultimoalug">
+                                <div class="flex flex1"><img class="book icon" src="../global/imagens_global/book.png">
+                                    <h5>Java: Como Programar</h5>
+                                </div>
+                                <div class="flex"><img class="user icon" src="../global/imagens_global/user.png">
+                                    <h5>Caio Cunha</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="../global/js_global/main.js"></script>
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

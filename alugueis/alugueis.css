@@ -1,0 +1,959 @@
+* {
+    font-family: 'Inter';
+}
+
+.content-dashboard {
+
+    overflow: auto;
+    height: 80vh;
+}
+
+/* Modais */
+/* Modal Devolver */
+.modaldevolvercaixa {
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background-color: #00000069;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.27s ;
+}
+
+.modaldevolver {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, transform 0.5s; 
+    z-index: 101;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 52px;
+    max-width: 90%;
+    border-radius: 5px;
+    background: #FFF;
+    width: 688px;
+    height: 432px;
+
+}
+
+.modaldevolver .modal-footer-devolver button {
+    border: none;
+    background: #3E5055;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    transition: 1.4s;
+    width: 284px;
+    height: 55px;
+}
+
+.modaldevolver #close-modal-devolver {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 99%;
+}
+
+.modaldevolver button img {
+    width: 24px;
+    height: 24px;
+
+}
+
+.modaldevolver button span {
+
+
+    color: #FFF;
+    text-align: center;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modaldevolver button:hover {
+    opacity: 0.6;
+
+}
+
+
+
+.modaldevolver img {
+    width: 124px;
+    height: 124px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+
+}
+
+.modaldevolver h1 {
+    color: #111;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+
+.modaldevolver h2 {
+    color: #111;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: initial;
+    margin-bottom: 40px;
+}
+
+.modal-footer-devolver {
+    text-align: center;
+
+}
+
+
+button#devolverbutton.secondbutton {
+    border-radius: 5px;
+    background: #1E6EAA;
+    margin-left: 10px;
+
+}
+
+.modaldevolver-body p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #414141;
+    margin-bottom: 1rem;
+}
+
+.modal-header-devolver {
+
+    align-items: center;
+    text-align: center;
+}
+
+.modal-show-devolver > .modaldevolver {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-show-devolver {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal excluir */
+.modalexcluircaixa {
+
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background-color: #00000069;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.27s ;
+}
+
+.modalexcluir {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, transform 0.5s; 
+    z-index: 10;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 52px;
+    max-width: 90%;
+    border-radius: 5px;
+    background: #FFF;
+
+    width: 688px;
+    height: 432px;
+
+}
+
+.modal-footer-excluir {
+    text-align: center;
+}
+
+.modalexcluir .modal-footer-excluir button {
+    border: none;
+    background: #3E5055;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    transition: 1.4s;
+    width: 284px;
+    height: 55px;
+}
+
+.modalexcluir #close-modal-excluir {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 99%;
+}
+
+.modalexcluir button img {
+    width: 24px;
+    height: 24px;
+}
+
+.modalexcluir button span {
+
+
+    color: #FFF;
+    text-align: center;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modalexcluir button:hover {
+    opacity: 0.6;
+
+}
+
+
+
+.modalexcluir img {
+    width: 124px;
+    height: 124px;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+
+}
+
+.modalexcluir h1 {
+    color: #111;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+
+.modalexcluir h2 {
+    color: #111;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: initial;
+    margin-bottom: 40px;
+}
+
+.modalexcluir-footer {
+    text-align: center;
+}
+
+
+button#excluirbutton.secondbutton {
+    border-radius: 5px;
+    background: #1E6EAA;
+    margin-left: 10px;
+
+}
+
+.modalexcluir-body p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #414141;
+    margin-bottom: 1rem;
+}
+
+.modal-header-excluir {
+
+    align-items: center;
+    text-align: center;
+}
+
+.modal-show-excluir > .modalexcluir {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-show-excluir {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Modal editar */
+.modaleditarcaixa {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background-color: #00000069;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.27s ;
+}
+
+.modaleditar {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, transform 0.5s; 
+    z-index: 10;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 52px;
+    max-width: 90%;
+    border-radius: 5px;
+    background: #FFF;
+    width: 1200px;
+    height: 460px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    /* Define as áreas das colunas */
+}
+
+.modal-footer-editar {
+    grid-area: footer;
+    text-align: right;
+}
+
+.modaleditar .modal-footer-editar button {
+    border: none;
+    background: #3E5055;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    transition: 1.4s;
+    width: 284px;
+    height: 55px;
+}
+
+
+.modaleditar button img {
+    width: 24px;
+    height: 24px;
+}
+
+.modaleditar button span {
+
+
+    color: #FFF;
+    text-align: center;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modaleditar button:hover {
+    opacity: 0.6;
+
+}
+
+
+
+.modaleditar h1 {
+    color: #111;
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
+.modaleditar h2 {
+    color: #111;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: initial;
+    margin-bottom: 40px;
+}
+
+.modaleditar-footer {
+    text-align: center;
+}
+
+
+button#editarbutton.secondbutton {
+    border-radius: 5px;
+    background: #1E6EAA;
+    margin-left: 10px;
+
+}
+
+
+.modal-header-editar {
+    display: flex;
+}
+
+.modal-header-editar button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    height: 24px;
+
+}
+
+.modal-show-editar > .modaleditar {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-show-editar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal add aluguel */
+.modaladdaluguelcaixa {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background-color: #00000069;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.27s ;
+}
+
+.modaladdaluguel {
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s, transform 0.5s; 
+    z-index: 10;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 45px;
+    padding-right: 52px;
+    max-width: 90%;
+    border-radius: 5px;
+    background: #FFF;
+    width: 1200px;
+    height: 460px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    /* Define as áreas das colunas */
+}
+
+.modal-footer-addaluguel {
+    grid-area: footer;
+    text-align: right;
+}
+
+.modaladdaluguel .modal-footer-addaluguel button {
+    border: none;
+    background: #3E5055;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    transition: 1.4s;
+    width: 284px;
+    height: 55px;
+}
+
+.modaladdaluguel button img {
+    width: 24px;
+    height: 24px;
+}
+
+.modaladdaluguel button span {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.modaladdaluguel button:hover {
+    opacity: 0.6;
+}
+
+.modaladdaluguel h1 {
+    color: #111;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.modaladdaluguel h2 {
+    color: #111;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: initial;
+    margin-bottom: 40px;
+}
+
+.modaladdaluguel-footer {
+    text-align: center;
+}
+
+button#addaluguelbutton.secondbutton {
+    border-radius: 5px;
+    background: #1E6EAA;
+    margin-left: 10px;
+}
+
+.modal-header-addaluguel {
+    display: flex;
+}
+
+.modal-header-addaluguel button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    height: 24px;
+}
+
+.modal-show-addaluguel > .modaladdaluguel {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-show-addaluguel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* formulario editar */
+
+
+
+.input-group {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+
+    column-gap: 11px;
+    align-items: initial;
+
+}
+
+.modaleditar .label,
+.modaladdaluguel .label {
+    border-radius: 5px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 239px;
+    height: 50px;
+    margin-bottom: 15px;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.label.labelprev {
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+
+
+.label span {
+    line-height: 2;
+}
+
+.modaleditar .input,
+.modaladdaluguel .input {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.modaleditar input,
+.modaladdaluguel input {
+    border-radius: 5px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.40);
+    background: #FFF;
+    color: rgba(64, 64, 64, 0.60);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Inter';
+    width: 100%;
+    height: 50px;
+
+}
+
+input::placeholder {
+    color: rgba(64, 64, 64, 0.60);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+input:focus-visible {
+    outline: solid 1px #1E6EAA;
+}
+
+.input-box {
+    margin-bottom: 25px;
+
+}
+
+.input.input-date-alug {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.input.input-date-prev {
+
+    grid-column-start: 4;
+}
+
+/* Status CSS */
+
+
+.tabela span {
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+.pendente {
+
+    background-color: #F8C43E;
+    color: #8C6601;
+
+}
+
+.atrasado {
+    color: #891111;
+    background: #E65C5C;
+}
+
+.devolvido {
+    color: #34813B;
+    background: #5CE66A;
+}
+
+/* botões da tabela */
+.tabela button {
+    border: none;
+    background-color: transparent;
+}
+
+/* Responsividade */
+@media (width < 1295px) {
+
+    .expandir~.main .tabela {
+        height: 300px;
+    }
+
+    .expandir~.main .tabela2 {
+        margin-top: 10px;
+    }
+
+    .expandir~.main thead {
+        display: none;
+    }
+
+    .expandir~.main .tabela,
+    .expandir~.main .tabela tbody,
+    .expandir~.main .tabela tr,
+    .expandir~.main .tabela td {
+        display: block;
+        width: 100%;
+
+    }
+
+    .expandir~.main td:first-child {
+        padding-left: 0px;
+    }
+
+    .expandir~.main .tabela tr {
+        margin-bottom: 15px;
+        border-bottom: 1.5px solid rgba(62, 62, 62, 0.47);
+        flex-shrink: 0;
+
+    }
+
+
+    .expandir~.main .tabela td {
+        text-align: right;
+        padding-left: 10%;
+        text-align: right;
+        position: relative;
+        padding-right: 2%;
+
+    }
+
+    .expandir~.main .tabela td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left;
+        flex-shrink: 0;
+
+    }
+
+}
+
+@media (width < 1156px) {
+    .tabela {
+        font-size: 14px;
+    }
+}
+
+@media (width < 1062px) {
+    .tabela {
+        height: 300px;
+    }
+
+    .tabela2 {
+        margin-top: 10px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    .tabela,
+    .tabela tbody,
+    .tabela tr,
+    .tabela td {
+        display: block;
+        width: 100%;
+
+    }
+
+    td:first-child {
+        padding-left: 0px;
+    }
+
+    .tabela tr {
+        margin-bottom: 15px;
+        border-bottom: 1.5px solid rgba(62, 62, 62, 0.47);
+        flex-shrink: 0;
+
+    }
+
+
+    .tabela td {
+        text-align: right;
+        padding-left: 10%;
+        text-align: right;
+        position: relative;
+        padding-right: 2%;
+
+    }
+
+    .tabela td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: left;
+        flex-shrink: 0;
+
+    }
+
+    .input.input-date-alug {
+        grid-column-end: 5;
+    }
+
+    .label.labelprev {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .input.input-date-prev {
+        grid-column-start: 2;
+    }
+}
+
+
+@media (width < 826px) {
+   
+        .expandir ~.main .tabela .prevdevolucao {
+            padding-bottom: 20px;
+        }
+    
+}
+
+@media (width < 761px) {
+
+    .modaleditar .modal-footer-editar button,
+    .modaladdaluguel .modal-footer-addaluguel button {
+        width: 200px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 755px) {
+
+    /* Responsividade modais */
+    .modalexcluir .modal-footer-excluir button {
+
+        width: 200px;
+        height: 55px;
+
+    }
+}
+
+
+
+@media (width < 645px) {
+
+    .modaleditar,
+    .modaladdaluguel {
+        height: 500px;
+        overflow: auto;
+     
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+
+    }
+
+    .input-group .input {
+        margin-bottom: 10px;
+    }
+
+    .modaleditar .label,
+    .modaladdaluguel .label {
+        width: 100%;
+    }
+}
+
+@media (width < 581px) {
+
+    .modaleditar .modal-footer-editar button,
+    .modaladdaluguel .modal-footer-addaluguel button {
+        width: 100px;
+        height: 40px;
+
+    }
+
+    .modaleditar .modal-footer-editar button>span,
+    .modal-footer-addaluguel .modal-footer-addaluguel button>span {
+        font-size: 13px;
+    }
+}
+
+
+@media (width < 569px) {
+    .modalexcluir #close-modal-excluir {
+        margin-left: 90%;
+    }
+
+    .modalexcluir {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .modalexcluir .modal-footer-excluir button {
+        width: 130px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .modalexcluir {
+        height: 450px;
+    }
+
+    .modalexcluir .modal-footer-excluir button span {
+        font-size: 15px;
+    }
+
+}
+
+@media (width < 481px) {
+    .content-dashboard {
+        height: 100vh;
+    }
+}
+
+@media (width < 498px) {
+    .tabela .prevdevolucao {
+
+        padding-bottom: 20px;
+    }
+}
+
+/* Responsividade -  mobile */
+@media (max-width: 480px) {
+
+
+
+    .tabela .prevdevolucao {
+
+        padding-bottom: 10px;
+    }
+
+}
+
+@media (width < 324px) {
+    .tabela .prevdevolucao {
+
+        padding-bottom: 20px;
+    }
+}
